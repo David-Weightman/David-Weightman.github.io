@@ -31,7 +31,7 @@ def getKeyWords(Counter, num):
                  "only", "own", "same", "so", "than", "too", "very", "s", "t",
                  "can", "will", "just", "don", "should", "now", "-", "News", "The",
                  "|", "CNN", "CBS", "BBC", "Guardian", "says", "news", "Daily",
-                 "Mail", "Online", "don't", "Mirror", "After", "NPR", "Washington", "Post", ""]
+                 "Mail", "Online", "don't", "Mirror", "After", "NPR", "Washington", "Post", "", "new"]
 
     # Variable to store the list of headlines
     words = ''
