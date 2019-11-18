@@ -97,9 +97,9 @@ while (num < 1):
     except ValueError:
         print("Sorry! You didn't enter a valid integer.\n")
     
-
+# Gets the most commonly occuring words
 keywords = getKeyWords(Counter, num)
-# Gets the most commonly occuring word from the list and returns it
+# Prints most common words and their occurrence
 words = []
 for i in keywords:
     print("Word:", i[0], " Appears:", i[1], "times")
