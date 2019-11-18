@@ -1,4 +1,6 @@
-Must set up server before use
+**********************************************************************
+MUST SET UP LOCALHOST SERVER BEFORE USE
+**********************************************************************
 
 Instructions
 - open cmd line
@@ -6,13 +8,13 @@ Instructions
 - type 'py -m http.server 8000'
 
 
-This program uses the 'requests' and 'spotipy' librabies
-These files are given in the zip file, 
+This program uses the 'requests' and 'spotipy' libraries
+These files (among others) are given in the zip file, 
 Please extract them to the main folder
 Or
 Import them using pip. 
 For example:
-	'py -m pip install spotipy'
+	'py -m pip install spotipy --user'
 
 
 
