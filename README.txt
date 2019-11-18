@@ -1,8 +1,9 @@
 **********************************************************************
-MUST SET UP LOCALHOST SERVER BEFORE USE
+             MUST SET UP LOCALHOST SERVER BEFORE USE
 **********************************************************************
 
 Instructions
+- Ensure Python 3 is installed
 - open cmd line
 - cd to this folder
 - type 'py -m http.server 8000'
@@ -18,6 +19,6 @@ For example:
 
 
 
-Spotify Credentials
+Spotify Credentials 
 username: 16629429@students.lincoln.ac.uk
 password: Group8Group8
