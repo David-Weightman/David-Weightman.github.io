@@ -101,10 +101,11 @@ while (num < 1):
 keywords = getKeyWords(Counter, num)
 # Prints most common words and their occurrence
 words = []
+print("The most common words in news headlines today:")
 for i in keywords:
     print("Word:", i[0], " Appears:", i[1], "times")
     words.append(i[0])
-
+print("")
 # Asks user how many songs per term they would like to add. Capped at 10 for above stated reason
 numSongs = 0
 while (numSongs < 1):
