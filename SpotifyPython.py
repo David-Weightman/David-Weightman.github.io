@@ -79,7 +79,7 @@ username = "75ag8jyj355b1cshmfjd5vj3l"
 playlist_id = "37j7Yf18t5qXwa21qfNgef"
 client_id = '364b5081d9e14ae38dccf9a353c5b827'
 client_secret = '98993b5baf324f59917f4069a6747c65'
-redirect_uri = 'http://localhost:8000/'
+redirect_uri = 'https://david-weightman.github.io/'
 scope = 'user-library-read playlist-modify-public playlist-modify-private user-library-modify'
 
 
