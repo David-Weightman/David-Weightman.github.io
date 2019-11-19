@@ -5,12 +5,14 @@ import re
 import spotipy.util as util
 from collections import Counter
 
+
 #Gets most used key term used in US news headlines
-def getKeyWords(Counter, num):
+def getKeyWords(Counter, num, country):
+    
     # Gets the news data from the news api website
     news_url = ('https://newsapi.org/v2/top-headlines?'
-           'country=us&'
-           'apiKey=a8a1a5ea66c04f1488210e7b0016b948')
+           'country={}&'
+           'apiKey=a8a1a5ea66c04f1488210e7b0016b948'.format(country.lower()))
     response = requests.get(news_url)
 
     # List of stop words that are to be removed from our list of words
@@ -31,7 +33,9 @@ def getKeyWords(Counter, num):
                  "only", "own", "same", "so", "than", "too", "very", "s", "t",
                  "can", "will", "just", "don", "should", "now", "-", "News", "The",
                  "|", "CNN", "CBS", "BBC", "Guardian", "says", "news", "Daily",
-                 "Mail", "Online", "don't", "Mirror", "After", "NPR", "Washington", "Post", "", "new"]
+                 "Mail", "Online", "don't", "Mirror", "After", "NPR", "Washington",
+                 "Post", "", "new", "Sky", "ITV", "could" , "suggests", "fears",
+                 "live", "say"]
 
     # Variable to store the list of headlines
     words = ''
@@ -82,6 +86,21 @@ client_secret = '98993b5baf324f59917f4069a6747c65'
 redirect_uri = 'https://david-weightman.github.io/'
 scope = 'user-library-read playlist-modify-public playlist-modify-private user-library-modify'
 
+country = ''
+news_url = ''
+while True:
+    country = input("Do you want UK or US News? (type 'uk' or 'us')\n")
+    if (country.lower() == 'uk' or country.lower() == 'gb'):
+        country = 'gb'
+        break
+    elif (country.lower() == 'us'):
+        print("hello")
+        country = 'us'
+        break
+    else:
+        print("Please enter either 'UK' or 'US'")
+
+
 
 # Asks user how many key terms they want to use. Capped at 10 as 'empty' command can only do 100 songs per call
 num = 0
@@ -98,7 +117,7 @@ while (num < 1):
         print("Sorry! You didn't enter a valid integer.\n")
     
 # Gets the most commonly occuring words
-keywords = getKeyWords(Counter, num)
+keywords = getKeyWords(Counter, num, country)
 # Prints most common words and their occurrence
 words = []
 print("The most common words in news headlines today:")
@@ -130,6 +149,14 @@ if token:
     empty(sp, username, playlist_id)
     
     for i in words:
+        search(sp, i, numSongs)
+
+    print("Find your playlist here: open.spotify.com/playlist/" + playlist_id)
+    
+else:
+    print ("Can't get token for", username)
+
+
         search(sp, i, numSongs)
 
     print("Find your playlist here: open.spotify.com/playlist/" + playlist_id)
