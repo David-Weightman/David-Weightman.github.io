@@ -1,14 +1,3 @@
-**********************************************************************
-             MUST SET UP LOCALHOST SERVER BEFORE USE
-**********************************************************************
-
-Instructions
-- Ensure Python 3 is installed
-- open cmd line
-- cd to this folder
-- type 'py -m http.server 8000'
-
-
 This program uses the 'requests' and 'spotipy' libraries
 These files (among others) are given in the zip file, 
 Please extract them to the main folder
